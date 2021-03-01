@@ -11,3 +11,43 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.post {
+  border: 1px solid #000;
+  width: 40%;
+  margin: 10px;
+  padding: 10px;
+  background-color: lightgrey;
+}
+
+.post-name {
+  color: #0c1ab1;
+  font-size: larger;
+  float: left;
+}
+
+.post-status {
+  font-size: small;
+  font-style: italic;
+  text-decoration: underline;
+  float: right;
+}
+
+.post-content {
+  margin-top: 50px;
+  border: 1px solid #1e30ee;
+  padding: 5px;
+  background-color: wheat;
+}
+
+.new-post {
+  width: 50%;
+  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  background-color: wheat;
+}
+
+.new-post label  {
+  text-align: center;
+}
