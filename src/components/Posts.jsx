@@ -8,12 +8,14 @@ function Posts() {
 
   return (
     <>
+      <Link className="button" to="/posts/new">Создать пост</Link>
+      <h2>ВСЕ СООБЩЕНИЯ</h2>
       {posts.map(post => 
         <div className="post" key={post.id}>
           <div className="post-name">{post.name}</div>
           <div className="post-status">{post.status}</div>
           <div className="post-content">{post.content}</div>
-          <Link to={`/posts/${post.id}`} key={post.id}>Посмотреть</Link>
+          <Link className="button" to={`/posts/${post.id}`} key={post.id}>Посмотреть</Link>
         </div>
       )}
     </>

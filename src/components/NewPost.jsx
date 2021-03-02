@@ -1,6 +1,6 @@
 import React, {useState, useContext} from 'react';
 import PostsContext from '../contexts/PostsContext';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 function NewPost() {
 
@@ -32,6 +32,7 @@ function NewPost() {
 
   return (
     <>
+      <h2>НОВОЕ СООБЩЕНИЕ</h2>
       <form className="new-post">
         <label htmlFor="nickname">Ваше имя</label>
         <input onChange={handleChange} value={form.nickname} name="nickname" id="nickname" type="text"/>
@@ -40,7 +41,8 @@ function NewPost() {
         <label htmlFor="message">Введите сообщение</label>
         <textarea onChange={handleChange} value={form.message} name="message" id="message" cols="30" rows="10"></textarea>
       </form>
-      <Link onClick={() => addPost(form)} to="/">Отправить</Link>
+      <Link className="button" onClick={() => addPost(form)} to="/">Отправить</Link>
+      <Link className="button" to="/">Вернуться на главную</Link>
     </>
   )
 }

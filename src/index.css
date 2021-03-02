@@ -51,3 +51,28 @@ code {
 .new-post label  {
   text-align: center;
 }
+
+.button {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: red;
+
+  display: inline-block;
+  vertical-align: middle;
+  
+  min-width: 100px;
+  padding: 17px 17px;
+  
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+}
+
+.input-edit {
+  width: 500px;
+}
