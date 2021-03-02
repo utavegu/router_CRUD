@@ -1,9 +1,10 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react';
+import PostsContext from '../contexts/PostsContext';
 import { Link } from 'react-router-dom';
 
 function NewPost() {
 
-  const POSTS_LINK = 'http://localhost:7777/posts';
+  const [ , loadActualPosts, POSTS_LINK] = useContext(PostsContext);
 
   let [form, setForm] = useState({
     nickname: '',
@@ -14,7 +15,6 @@ function NewPost() {
   const handleChange = ({target}) => {
     setForm(prevForm => ({...prevForm, [target.name]: target.value}));
   }
-
 
   const addPost = data => {
 		fetch(POSTS_LINK, {
@@ -27,9 +27,8 @@ function NewPost() {
 				"content": `${data.message}`
 			})
 		})
-		// loadActualPosts();
+		loadActualPosts();
 	};
-
 
   return (
     <>
@@ -40,7 +39,6 @@ function NewPost() {
         <input onChange={handleChange} value={form.status} name="status" id="status" type="text"/>
         <label htmlFor="message">Введите сообщение</label>
         <textarea onChange={handleChange} value={form.message} name="message" id="message" cols="30" rows="10"></textarea>
-        {/* <button onClick={() => addPost("ПРИВЕТ")} type="submit">Отправить</button> */}
       </form>
       <Link onClick={() => addPost(form)} to="/">Отправить</Link>
     </>

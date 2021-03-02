@@ -1,17 +1,15 @@
-import React, {useState, useEffect, useContext} from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import React from 'react';
+import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
 import PostsProvider from './components/PostsProvider';
-
 import Posts from './components/Posts';
 import Post from './components/Post';
 import NewPost from './components/NewPost';
 
 /*
-Прокинуть лоадАутуалПостс в нужные компоненты
-Приступай к карточке редактирования
-Почитай подробнее по пропсам линка - матч и прочим
-Как сделать, чтобы айдишники не повторялись?.. Ну это привет бэкэнду, наверное?
-Не забудь про пэйдж 404 и вычистить код
+1) ENV-переменные
+2) Почитай подробнее по пропсам линка - матч и прочим
+3) Как сделать, чтобы айдишники не повторялись?.. Ну это привет бэкэнду, наверное?
+4) Не забудь про пэйдж 404 и вычистить код+-
 */
 
 function App() {
